@@ -30,8 +30,7 @@ public class ShoppingCart {
 
         int totalPrice = 0;
         for (int i = 0; i < itemCount; i++) {
-            Item item = items[i];
-            totalPrice += item.getTotalPrice();
+            totalPrice += items[i].getTotalPrice();
         }
         return totalPrice;
 

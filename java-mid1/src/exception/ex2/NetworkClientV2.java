@@ -1,31 +1,27 @@
-package exception.ex01;
+package exception.ex2;
 
-public class NetworkClientV1 {
+public class NetworkClientV2 {
 
     private final String address;
     public boolean connectError;
     public boolean sendError;
 
-    public NetworkClientV1(String address) {
+    public NetworkClientV2(String address) {
         this.address = address;
     }
 
-    public String connect(){
+    public void connect() throws NetworkClientExceptionV2 {
         if(connectError){
-            System.out.println("address : " + "서버 연결 실패");
-            return "connectError";
+            throw new NetworkClientExceptionV2("connectError", address  + " : 서버 연결 실패");
         }
         System.out.println(address + "서버 연결 성공");
-        return "success";
     }
 
-    public String send(String data){
+    public void send(String data) throws NetworkClientExceptionV2 {
         if(sendError){
-            System.out.println(address + " 서버에 데이터 전송 실패: " + data);
-            return "sendError";
+            throw new NetworkClientExceptionV2("sendError", address + " 서버에 데이터 전송 실패: " + data);
         }
         System.out.println(address + " 서버에 데이터 전송: " + data);
-        return "success";
     }
 
     public void disconnect(){

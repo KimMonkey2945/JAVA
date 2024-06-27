@@ -1,0 +1,26 @@
+package generic.ex1;
+
+public class BoxMain3 {
+
+    public static void main(String[] args) {
+
+        GenericBox<Integer> integerBox = new GenericBox<>();
+        integerBox.set(24);
+        Integer integer = integerBox.get();
+        System.out.println("integer = " + integer);
+
+        GenericBox<String> stringBox = new GenericBox<>();
+        stringBox.set("김주하");
+        String str = stringBox.get();
+        System.out.println("str = " + str);
+
+        GenericBox<Double> doubleBox = new GenericBox<>();
+        doubleBox.set(2.4);
+        Double doubleValue = doubleBox.get();
+        System.out.println("doubleValue = " + doubleValue);
+
+
+
+    }
+
+}

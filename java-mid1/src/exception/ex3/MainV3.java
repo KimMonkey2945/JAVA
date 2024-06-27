@@ -1,7 +1,6 @@
 package exception.ex3;
 
 import exception.ex3.exception.NetworkClientExceptionV3;
-import exception.ex3.exception.NetworkServiceV3_2;
 
 import java.util.Scanner;
 
